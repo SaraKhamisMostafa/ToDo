@@ -12,9 +12,7 @@ list-style: none;
 .completed{
     opacity: .3;
 }
-.uncompleted{
-    opacity: 1;
-}
+
 .delete{
     display: none;
 }

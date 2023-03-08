@@ -35,34 +35,30 @@ function addTodo(e){
     tododelete.classList.add("m-1")
     tododelete.innerHTML =`<i class="fa-solid fa-trash"></i>`
     todoLi.appendChild(tododelete)
-
+    
     todoResult.appendChild(todoLi)
 
     todoInput.value=''
 }
 
-// function toggleToDo(e){
-//     const item = e.target
+function toggleToDo(e){
+    const item = e.target
 
-//     const main_item = item.parentElement.parentElement
+    console.log(item.classList)
 
-//      if (main_item.classList[3] == 'completed'){
-//       main_item.classList.remove('completed')
-//      }else{
-//         main_item.classList.add('completed')
-//      }
-// }
+     if (item.classList[1] == 'fa-check'){
+        console.log('complete task')
+        item.parentElement.parentElement.classList.toggle('completed')
+     }else{
+        console.log('delete task')
+        item.parentElement.parentElement.classList.toggle('delete')
+     }
+}
  
-function taskComplete(e){
 
-}
-
-function taskDelete(e){
-    
-}
 
 
 
 
 todoBtn.addEventListener('click' ,addTodo)
-// todoResult.addEventListener('click',toggleToDo)
+todoResult.addEventListener('click',toggleToDo)
