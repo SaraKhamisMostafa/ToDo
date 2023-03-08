@@ -9,3 +9,12 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 .task-result{
 list-style: none;
 }
+.completed{
+    opacity: .3;
+}
+.uncompleted{
+    opacity: 1;
+}
+.delete{
+    display: none;
+}
